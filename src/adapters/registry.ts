@@ -6,6 +6,8 @@ import { mastodonAdapter } from "./mastodon.ts";
 import { youtubeAdapter } from "./youtube.ts";
 import { twitterAdapter } from "./twitter.ts";
 import { linkedinAdapter } from "./linkedin.ts";
+import { substackAdapter } from "./substack.ts";
+import { instagramAdapter } from "./instagram.ts";
 
 const adapters = new Map<string, Adapter>();
 
@@ -17,6 +19,8 @@ adapters.set("mastodon", mastodonAdapter);
 adapters.set("youtube", youtubeAdapter);
 adapters.set("twitter", twitterAdapter);
 adapters.set("linkedin", linkedinAdapter);
+adapters.set("substack", substackAdapter);
+adapters.set("instagram", instagramAdapter);
 
 export function getAdapter(name: string): Adapter | undefined {
   return adapters.get(name);

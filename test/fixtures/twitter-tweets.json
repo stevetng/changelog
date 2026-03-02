@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "id": "1800000000000000001",
+      "text": "Just shipped the changelog aggregator widget! Pulls from GitHub, Mastodon, YouTube, and more into a single embeddable feed.",
+      "created_at": "2026-03-01T18:00:00.000Z",
+      "public_metrics": {
+        "retweet_count": 12,
+        "reply_count": 3,
+        "like_count": 45,
+        "quote_count": 2
+      },
+      "attachments": {
+        "media_keys": ["media_001"]
+      }
+    },
+    {
+      "id": "1800000000000000002",
+      "text": "Working on dark mode support for the widget. Auto-detects system preference.\n\nAlso added filter chips for tags and sources.",
+      "created_at": "2026-02-28T14:30:00.000Z",
+      "public_metrics": {
+        "retweet_count": 5,
+        "reply_count": 1,
+        "like_count": 20,
+        "quote_count": 0
+      }
+    },
+    {
+      "id": "1800000000000000003",
+      "text": "TIL: SQLite's WAL mode makes concurrent reads and writes so much smoother. Perfect for a small self-hosted app.",
+      "created_at": "2026-02-25T09:15:00.000Z",
+      "public_metrics": {
+        "retweet_count": 8,
+        "reply_count": 2,
+        "like_count": 33,
+        "quote_count": 1
+      }
+    }
+  ],
+  "includes": {
+    "media": [
+      {
+        "media_key": "media_001",
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/changelog-widget-preview.jpg"
+      }
+    ]
+  },
+  "meta": {
+    "result_count": 3,
+    "next_token": "abc123"
+  }
+}

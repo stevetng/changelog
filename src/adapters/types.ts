@@ -23,6 +23,7 @@ export type Platform =
   | "youtube"
   | "linkedin"
   | "newsletter"
+  | "instagram"
   | "manual"
   | string;
 

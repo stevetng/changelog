@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test Writer's Newsletter</title>
+    <link>https://testwriter.substack.com</link>
+    <description>A newsletter about building things on the web.</description>
+    <atom:link href="https://testwriter.substack.com/feed" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Why I Built a Personal Changelog</title>
+      <link>https://testwriter.substack.com/p/why-i-built-a-personal-changelog</link>
+      <guid>https://testwriter.substack.com/p/why-i-built-a-personal-changelog</guid>
+      <pubDate>Sat, 01 Mar 2026 12:00:00 GMT</pubDate>
+      <description>I wanted a single place to track everything I ship across platforms. Here's how I built it with SQLite, Hono, and Lit web components.</description>
+    </item>
+    <item>
+      <title>The Case for SQLite in Production</title>
+      <link>https://testwriter.substack.com/p/sqlite-in-production</link>
+      <guid>https://testwriter.substack.com/p/sqlite-in-production</guid>
+      <pubDate>Mon, 24 Feb 2026 10:00:00 GMT</pubDate>
+      <description>SQLite is not just for prototyping. WAL mode, proper concurrency settings, and a single-file deployment make it ideal for small apps.</description>
+    </item>
+    <item>
+      <title>Web Components in 2026</title>
+      <link>https://testwriter.substack.com/p/web-components-2026</link>
+      <guid>https://testwriter.substack.com/p/web-components-2026</guid>
+      <pubDate>Mon, 17 Feb 2026 08:00:00 GMT</pubDate>
+      <description>Lit, Stencil, or vanilla custom elements? A comparison of modern approaches to building reusable UI components.</description>
+    </item>
+  </channel>
+</rss>
