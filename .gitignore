@@ -1,6 +1,7 @@
 node_modules/
 dist/
-public/widget.js
+public/*.js
+public/*.js.map
 data/*.db
 .env
 *.tsbuildinfo

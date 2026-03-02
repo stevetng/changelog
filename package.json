@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "build:widget": "tsup src/widget/changelog-feed.ts --format esm --minify --outDir public",
+    "build:widget": "tsup src/widget/changelog-feed.ts --format esm --minify --outDir public --no-dts --tsconfig tsconfig.widget.json --target es2022 --platform browser",
     "start": "node dist/index.js",
     "sync": "tsx src/sync/run.ts",
     "db:migrate": "tsx src/db/migrate.ts",
@@ -18,6 +18,7 @@
     "better-sqlite3": "^11.8.0",
     "gray-matter": "^4.0.3",
     "hono": "^4.7.0",
+    "lit": "^3.3.2",
     "node-cron": "^3.0.3",
     "rss-parser": "^3.13.0",
     "zod": "^3.24.0"

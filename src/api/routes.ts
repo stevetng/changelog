@@ -1,5 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
+import { readFileSync, existsSync } from "node:fs";
+import { resolve } from "node:path";
 import { getConfig } from "../config.ts";
 import { queryEntries, getLatestSyncLogs } from "../db/client.ts";
 import { syncAll } from "../sync/engine.ts";
@@ -63,6 +65,19 @@ export function createApiRoutes(corsOrigins?: string[]): Hono {
     const { entries } = queryEntries({ limit: 50 });
     const xml = generateAtom(entries, config);
     return c.body(xml, 200, { "Content-Type": "application/atom+xml; charset=utf-8" });
+  });
+
+  // Serve built widget JS
+  api.get("/widget.js", (c) => {
+    const widgetPath = resolve("public/changelog-feed.js");
+    if (!existsSync(widgetPath)) {
+      return c.text("Widget not built. Run: npm run build:widget", 404);
+    }
+    const js = readFileSync(widgetPath, "utf-8");
+    return c.body(js, 200, {
+      "Content-Type": "application/javascript; charset=utf-8",
+      "Cache-Control": "public, max-age=3600",
+    });
   });
 
   // Manual sync trigger
