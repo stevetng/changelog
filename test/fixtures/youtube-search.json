@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "id": { "videoId": "abc123" },
+      "snippet": {
+        "title": "Building a Changelog Widget with Lit",
+        "description": "In this video, I walk through building a web component for a personal changelog using Lit.",
+        "publishedAt": "2026-03-01T10:00:00Z",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/abc123/default.jpg" },
+          "medium": { "url": "https://i.ytimg.com/vi/abc123/mqdefault.jpg" },
+          "high": { "url": "https://i.ytimg.com/vi/abc123/hqdefault.jpg" }
+        }
+      }
+    },
+    {
+      "id": { "videoId": "def456" },
+      "snippet": {
+        "title": "SQLite Tips for Web Developers",
+        "description": "Five SQLite features every web developer should know.",
+        "publishedAt": "2026-02-20T14:00:00Z",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/def456/default.jpg" },
+          "medium": { "url": "https://i.ytimg.com/vi/def456/mqdefault.jpg" },
+          "high": { "url": "https://i.ytimg.com/vi/def456/hqdefault.jpg" }
+        }
+      }
+    },
+    {
+      "id": { "videoId": "ghi789" },
+      "snippet": {
+        "title": "Hono.js: The Lightweight Framework You Need",
+        "description": "",
+        "publishedAt": "2026-02-10T18:30:00Z",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/ghi789/default.jpg" },
+          "medium": { "url": "https://i.ytimg.com/vi/ghi789/mqdefault.jpg" },
+          "high": { "url": "https://i.ytimg.com/vi/ghi789/hqdefault.jpg" }
+        }
+      }
+    }
+  ]
+}

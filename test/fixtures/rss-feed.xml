@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test Blog</title>
+    <link>https://testblog.com</link>
+    <description>A test blog for fixture data</description>
+    <item>
+      <title>Building a Personal Changelog</title>
+      <link>https://testblog.com/posts/personal-changelog</link>
+      <guid>https://testblog.com/posts/personal-changelog</guid>
+      <pubDate>Sat, 01 Mar 2026 12:00:00 GMT</pubDate>
+      <description>How I built a unified changelog for all my online activity.</description>
+    </item>
+    <item>
+      <title>Web Components in 2026</title>
+      <link>https://testblog.com/posts/web-components-2026</link>
+      <guid>https://testblog.com/posts/web-components-2026</guid>
+      <pubDate>Thu, 27 Feb 2026 09:00:00 GMT</pubDate>
+      <description>The state of web components and why Lit is my go-to.</description>
+    </item>
+    <item>
+      <title>SQLite for Everything</title>
+      <link>https://testblog.com/posts/sqlite-for-everything</link>
+      <guid>https://testblog.com/posts/sqlite-for-everything</guid>
+      <pubDate>Mon, 24 Feb 2026 15:30:00 GMT</pubDate>
+      <description>Why SQLite is the right choice for most personal projects.</description>
+    </item>
+    <item>
+      <title>Deploying Hono to Cloudflare Workers</title>
+      <link>https://testblog.com/posts/hono-cloudflare</link>
+      <guid>https://testblog.com/posts/hono-cloudflare</guid>
+      <pubDate>Fri, 21 Feb 2026 11:00:00 GMT</pubDate>
+      <description>A step-by-step guide to deploying Hono apps on Cloudflare Workers.</description>
+    </item>
+    <item>
+      <title>My 2025 Year in Review</title>
+      <link>https://testblog.com/posts/2025-review</link>
+      <guid>https://testblog.com/posts/2025-review</guid>
+      <pubDate>Wed, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <description>Looking back at what I shipped, learned, and experienced in 2025.</description>
+    </item>
+  </channel>
+</rss>

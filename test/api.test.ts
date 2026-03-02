@@ -168,6 +168,29 @@ describe("API routes", () => {
     }
   });
 
+  it("GET /api/changelog.rss returns RSS XML", async () => {
+    const res = await app.request("/api/changelog.rss");
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("application/rss+xml");
+
+    const body = await res.text();
+    expect(body).toContain("<rss version");
+    expect(body).toContain("<title>Test Changelog</title>");
+    expect(body).toContain("<title>First entry</title>");
+    expect(body).toContain("<title>Blog post</title>");
+  });
+
+  it("GET /api/changelog.atom returns Atom XML", async () => {
+    const res = await app.request("/api/changelog.atom");
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("application/atom+xml");
+
+    const body = await res.text();
+    expect(body).toContain('<feed xmlns="http://www.w3.org/2005/Atom">');
+    expect(body).toContain("<title>Test Changelog</title>");
+    expect(body).toContain("<title>First entry</title>");
+  });
+
   it("JSON shape matches spec", async () => {
     const res = await app.request("/api/changelog.json");
     const body = await res.json();

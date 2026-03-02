@@ -3,6 +3,7 @@ import { cors } from "hono/cors";
 import { getConfig } from "../config.ts";
 import { queryEntries, getLatestSyncLogs } from "../db/client.ts";
 import { syncAll } from "../sync/engine.ts";
+import { generateRss, generateAtom } from "./feed.ts";
 
 export function createApiRoutes(corsOrigins?: string[]): Hono {
   const api = new Hono();
@@ -46,6 +47,22 @@ export function createApiRoutes(corsOrigins?: string[]): Hono {
         media: e.media,
       })),
     });
+  });
+
+  // RSS feed
+  api.get("/changelog.rss", (c) => {
+    const config = getConfig();
+    const { entries } = queryEntries({ limit: 50 });
+    const xml = generateRss(entries, config);
+    return c.body(xml, 200, { "Content-Type": "application/rss+xml; charset=utf-8" });
+  });
+
+  // Atom feed
+  api.get("/changelog.atom", (c) => {
+    const config = getConfig();
+    const { entries } = queryEntries({ limit: 50 });
+    const xml = generateAtom(entries, config);
+    return c.body(xml, 200, { "Content-Type": "application/atom+xml; charset=utf-8" });
   });
 
   // Manual sync trigger
