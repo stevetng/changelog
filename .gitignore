@@ -1,0 +1,6 @@
+node_modules/
+dist/
+public/widget.js
+data/*.db
+.env
+*.tsbuildinfo

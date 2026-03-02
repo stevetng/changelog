@@ -1,0 +1,32 @@
+{
+  "name": "changelog",
+  "version": "0.1.0",
+  "description": "A unified personal changelog that pulls updates from your connected platforms and serves them as an embeddable widget + JSON feed.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build:widget": "tsup src/widget/changelog-feed.ts --format esm --minify --outDir public",
+    "start": "node dist/index.js",
+    "sync": "tsx src/sync/run.ts",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "hono": "^4.7.0",
+    "@hono/node-server": "^1.14.0",
+    "better-sqlite3": "^11.8.0",
+    "zod": "^3.24.0",
+    "gray-matter": "^4.0.3",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
