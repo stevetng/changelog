@@ -1,0 +1,14 @@
+services:
+  changelog:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URL=file:./data/changelog.db
+    env_file:
+      - .env
+    restart: unless-stopped
